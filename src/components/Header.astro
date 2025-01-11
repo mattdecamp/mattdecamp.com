@@ -1,0 +1,39 @@
+---
+// import Hamburger from "./Hamburger.astro";
+import SocialIcons from "./SocialIcons.astro";
+import Navigation from "./Navigation.astro";
+import Avatar from "./Avatar.astro";
+const { title, subTitle, homepage } = Astro.props;
+---
+
+<header>
+  <nav>
+    <!-- <Hamburger /> -->
+
+    {
+      homepage ? (
+        <nav id="nav-container">
+          <div id="nav-container--top">
+            <Navigation />
+          </div>
+          <div id="nav-container--bottom">
+            <div id="site-title">{title}</div>
+            <h2>{subTitle}</h2>
+            <SocialIcons />
+            <Avatar />
+          </div>
+        </nav>
+      ) : (
+        <nav id="nav-container">
+          <div id="nav-container--top">
+            <div id="site-title">{title}</div>
+            <SocialIcons />
+          </div>
+          <div id="nav-container--botom">
+            <Navigation />
+          </div>
+        </nav>
+      )
+    }
+  </nav>
+</header>

@@ -1,0 +1,23 @@
+---
+import navIcons from "../assets/icons/navIcons";
+const { slug, title, link, icon } = Astro.props;
+---
+
+<div class="navigation-link--container">
+  {
+    slug && (
+      <a class="" title={title} href={`/${slug}`}>
+        {icon && <Fragment set:html={navIcons[icon]} />}
+        {title}
+      </a>
+    )
+  }
+  {
+    link && (
+      <a class="navigation--link" title={title} href={`${link}`}>
+        {icon && <Fragment set:html={navIcons[icon]} />}
+        {title}
+      </a>
+    )
+  }
+</div>

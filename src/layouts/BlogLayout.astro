@@ -1,0 +1,27 @@
+---
+// import "../styles/base.css";
+import type { CollectionEntry } from "astro:content";
+import GeneralLayout from "./GeneralLayout.astro";
+
+type Props = CollectionEntry<"blog">["data"];
+
+const { title, description, author, pubDate, tags } = Astro.props;
+---
+
+<GeneralLayout>
+  <p class="text-red-500">Hi</p>
+  {pubDate}
+  <slot /> 
+</GeneralLayout>
+
+<!-- ---
+import GeneralLayout from "./GeneralLayout.astro";
+const { frontmatter } = Astro.props;
+const tags = frontmatter.tags;
+---
+
+<GeneralLayout pageTitle={frontmatter.title}>
+  <p>Written by {frontmatter.author}</p>
+  <p>Date {frontmatter.pubDate.toString().slice(0, 10)}</p>
+  <slot />
+</GeneralLayout> -->

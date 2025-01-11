@@ -1,0 +1,17 @@
+---
+import GeneralLayout from "../layouts/GeneralLayout.astro";
+
+const { bookTitle, dateRead, bookImage, bookAuthor, status, audiobook, didntFinish, bookYear } = Astro.props;
+const pageTitle = "Bookshelf";
+---
+
+<GeneralLayout pageTitle={pageTitle}>
+  <p>This is where I will post about my journey learning Astro.</p>
+  <slot />
+</GeneralLayout>
+
+<!-- <style>
+  .bookImage {
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  }
+</style> -->

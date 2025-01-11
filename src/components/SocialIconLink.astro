@@ -1,0 +1,11 @@
+---
+const { platform, username, title, icon } = Astro.props;
+import socialIcons from '../assets/icons/socialIcons'
+---
+{
+
+  <a class="svglinkcolor" href={`https://${platform}/${username}`} title={title}>
+    <Fragment set:html={socialIcons[icon]} />
+  </a>
+
+}
