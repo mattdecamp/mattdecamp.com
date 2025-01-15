@@ -5,6 +5,7 @@ const socialIcons = {
     xmlns="http://www.w3.org/2000/svg"
     stroke-linecap="round"
     stroke-linejoin="round"
+    class="social-icon"
   >
     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
     <path
@@ -15,6 +16,7 @@ const socialIcons = {
     xmlns="http://www.w3.org/2000/svg"
     stroke-linecap="round"
     stroke-linejoin="round"
+    class="social-icon"
   >
     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
     <rect x="4" y="4" width="16" height="16" rx="4"></rect>
@@ -25,6 +27,7 @@ const socialIcons = {
     xmlns="http://www.w3.org/2000/svg"
     stroke-linecap="round"
     stroke-linejoin="round"
+    class="social-icon"
   >
     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
     <rect x="4" y="4" width="16" height="16" rx="2"></rect>
@@ -37,6 +40,7 @@ const socialIcons = {
       xmlns="http://www.w3.org/2000/svg"
       stroke-linecap="round"
       stroke-linejoin="round"
+      class="social-icon"
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
       <rect x="3" y="5" width="18" height="14" rx="2"></rect>
@@ -46,6 +50,7 @@ const socialIcons = {
       xmlns="http://www.w3.org/2000/svg"
       stroke-linecap="round"
       stroke-linejoin="round"
+      class="social-icon"
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
       <path d="M3 15l9 6l9 -6l-9 -6l-9 6"></path>
@@ -59,7 +64,7 @@ const socialIcons = {
       xmlns="http://www.w3.org/2000/svg"
       stroke-linecap="round"
       stroke-linejoin="round"
-
+class="social-icon"
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
       <circle cx="9" cy="12" r="1"></circle>
@@ -69,8 +74,8 @@ const socialIcons = {
       <path d="M15.5 17c0 1 1.5 3 2 3c1.5 0 2.833 -1.667 3.5 -3c.667 -1.667 .5 -5.833 -1.5 -11.5c-1.457 -1.015 -3 -1.34 -4.5 -1.5l-1 2.5"></path>
       <path d="M8.5 17c0 1 -1.356 3 -1.832 3c-1.429 0 -2.698 -1.667 -3.333 -3c-.635 -1.667 -.476 -5.833 1.428 -11.5c1.388 -1.015 2.782 -1.34 4.237 -1.5l1 2.5"></path>
     </svg>`,
-  rss: `<svg xmlns="http://www.w3.org/2000/svg" class="rss-icon"><path d="M19 20.001C19 11.729 12.271 5 4 5v2c7.168 0 13 5.832 13 13.001h2z"></path><path d="M12 20.001h2C14 14.486 9.514 10 4 10v2c4.411 0 8 3.589 8 8.001z"></path><circle cx="6" cy="18" r="2"></circle> </svg>`,
-  bluesky: `<svg fill="none" class="bsky-icon" viewBox="0 0 70 59"><path d="M13.873 3.805C21.21 9.332 29.103 20.537 32 26.55v15.882c0-.338-.13.044-.41.867-1.512 4.456-7.418 21.847-20.923 7.944-7.111-7.32-3.819-14.64 9.125-16.85-7.405 1.264-15.73-.825-18.014-9.015C1.12 23.022 0 8.51 0 6.55 0-3.268 8.579-.182 13.873 3.805ZM50.127 3.805C42.79 9.332 34.897 20.537 32 26.55v15.882c0-.338.13.044.41.867 1.512 4.456 7.418 21.847 20.923 7.944 7.111-7.32 3.819-14.64-9.125-16.85 7.405 1.264 15.73-.825 18.014-9.015C62.88 23.022 64 8.51 64 6.55c0-9.818-8.578-6.732-13.873-2.745Z"></path></svg>`,
+  rss: `<svg xmlns="http://www.w3.org/2000/svg" class="social-icon" class="rss-icon"><path d="M19 20.001C19 11.729 12.271 5 4 5v2c7.168 0 13 5.832 13 13.001h2z"></path><path d="M12 20.001h2C14 14.486 9.514 10 4 10v2c4.411 0 8 3.589 8 8.001z"></path><circle cx="6" cy="18" r="2"></circle> </svg>`,
+  bluesky: `<svg fill="none" class="social-icon bsky-icon" viewBox="0 0 70 59"><path d="M13.873 3.805C21.21 9.332 29.103 20.537 32 26.55v15.882c0-.338-.13.044-.41.867-1.512 4.456-7.418 21.847-20.923 7.944-7.111-7.32-3.819-14.64 9.125-16.85-7.405 1.264-15.73-.825-18.014-9.015C1.12 23.022 0 8.51 0 6.55 0-3.268 8.579-.182 13.873 3.805ZM50.127 3.805C42.79 9.332 34.897 20.537 32 26.55v15.882c0-.338.13.044.41.867 1.512 4.456 7.418 21.847 20.923 7.944 7.111-7.32 3.819-14.64-9.125-16.85 7.405 1.264 15.73-.825 18.014-9.015C62.88 23.022 64 8.51 64 6.55c0-9.818-8.578-6.732-13.873-2.745Z"></path></svg>`,
 };
 
 export default socialIcons;

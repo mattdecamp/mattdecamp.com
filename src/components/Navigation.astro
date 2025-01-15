@@ -5,17 +5,19 @@ import NavigationItem from "./NavigationItem.astro";
 
 <nav id="navigation">
   <!-- <SocialIcons /> -->
-  <div id="navigation--links" class="flex">
-    <NavigationItem icon="home" slug="#" title="Home" />
-    <NavigationItem icon="about" slug="about" title="About" />
-    <NavigationItem icon="blog" slug="blog" title="Blog" />
-    <NavigationItem icon="book" slug="bookshelf" title="Bookshelf" />
-    <NavigationItem
-      icon="music"
-      link="https://decamp.bandcamp.com"
-      title="Music"
-    />
-    <NavigationItem icon="refs" slug="refs" title="Refs" />
+  <div id="navigation-links--container" class="">
+    <ul id="navigation-links" class="flex flex-row flex-wrap">
+      <NavigationItem icon="home" slug="#" title="Home" />
+      <NavigationItem icon="about" slug="about" title="About" />
+      <NavigationItem icon="blog" slug="blog" title="Blog" />
+      <NavigationItem icon="book" slug="bookshelf" title="Bookshelf" />
+      <NavigationItem
+        icon="music"
+        link="https://decamp.bandcamp.com"
+        title="Music"
+      />
+      <NavigationItem icon="refs" slug="refs" title="Refs" />
+    </ul>
   </div>
 </nav>
 

@@ -2,25 +2,24 @@
 import GeneralLayout from "../../layouts/GeneralLayout.astro";
 import { getCollection } from "astro:content";
 
-const posts = (await getCollection("blog")).filter(post=>post.data.published).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
+const posts = (await getCollection("blog"))
+  .filter((post) => post.data.published)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-console.log(posts)
-const pageTitle = "Blog";
+const pageTitle = "Blog | Matt DeCamp's website";
 ---
 
 <GeneralLayout pageTitle={pageTitle}>
-  <p>This is where I will post about my journey learning Astro.</p>
   <ul>
     {
       posts.map(
         (post) =>
           post.data.published && (
             <li>
-              <a href={`/blog/${post.id}/`}>{post.data.title}</a>
+              {/* <a class="text-purple" href={`/blog/${post.id}/`}> */}
+              <h2 class="text-xl">{post.data.title}</h2>
+              {/* </a> */}
               <p>{post.data.pubDate}</p>
-              <p>{post.data.hey}</p>
             </li>
           )
       )

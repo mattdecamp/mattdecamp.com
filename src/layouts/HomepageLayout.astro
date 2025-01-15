@@ -1,24 +1,20 @@
 ---
-// import "../styles/input.css";
+import "../styles/base.css";
+import DocumentHead from "../components/DocumentHead.astro";
+import Announcement from "../components/Announcement.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Avatar from "../components/Avatar.astro";
 import SocialIcons from "../components/SocialIcons.astro";
 import Latest from "../components/Latest.astro";
-const { pageTitle, subtitle } = Astro.props;
 ---
 
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
-    <!-- <link href="./input.css" rel="stylesheet" /> -->
-  </head>
+  <DocumentHead />
   <body>
-    <div id="layout">
+    <Announcement />
+    <div id="layout" class="mx-auto">
       <Header
         homepage="true"
         title="Matt DeCamp"
@@ -31,8 +27,5 @@ const { pageTitle, subtitle } = Astro.props;
       </main>
       <Footer />
     </div>
-    <!-- <script>
-      import "../scripts/menu.js";
-    </script> -->
   </body>
 </html>

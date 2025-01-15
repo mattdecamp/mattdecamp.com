@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Patua One";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(../assets/fonts/PatuaOne-Regular.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Inter light";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(../assets/fonts/Inter_18pt-Light.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Inter semi-bold";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(../assets/fonts/Inter_18pt-SemiBold.ttf) format("truetype");
+  }
+  body {
+    @apply bg-background font-sans text-blue-regular text-lg
+  }
+  h1, h2, h4 {
+    @apply font-serif text-blue-regular
+  }
+  h1 {
+    @apply text-4xl
+  }
+  h2 {
+    @apply text-3xl
+  }
+  svg {
+    @apply inline-block w-7 h-7 scale-75 stroke-blue-regular stroke-2 fill-none
+  }
+  svg.social-icon {
+    @apply inline-block scale-150 stroke-blue-regular stroke-2 fill-none
+  }
+  div#layout {
+    @apply container mx-auto max-w-2xl px-4 py-4 flex flex-col h-screen
+  }
+  main#main-container {
+    @apply flex flex-col mb-auto
+  }
+}

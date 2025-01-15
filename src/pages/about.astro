@@ -1,10 +1,9 @@
 ---
 import GeneralLayout from "../layouts/GeneralLayout.astro";
-
+import { Content } from "../content/about.md";
 const pageTitle = "About Me";
 ---
 
 <GeneralLayout pageTitle={pageTitle}>
- <h2 id="currently">Currently</h2>
- <h2 id="fun-facts">Fun Facts</h2>
+ <Content />
 </GeneralLayout>
