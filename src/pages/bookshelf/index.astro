@@ -10,7 +10,6 @@ const pageTitle = "Bookshelf";
 ---
 
 <BookList pageTitle={pageTitle}>
-  <!-- <p>{description}</p> -->
   <ul>
     {
       allBooks.map((book) => (
@@ -33,6 +32,7 @@ const pageTitle = "Bookshelf";
               !book.data.didntFinish &&
               `Finished: ${book.data.dateRead}`}
             {book.data.didntFinish && `Didn't Finish 🙁`}
+            {!book.data.status && `Currently Reading`}
           </p>
         </li>
       ))
