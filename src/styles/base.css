@@ -25,10 +25,10 @@
     src: url(../assets/fonts/Inter_18pt-SemiBold.ttf) format("truetype");
   }
   body {
-    @apply bg-background font-sans text-blue-regular text-lg
+    @apply bg-background font-sans text-general-blue text-lg
   }
   h1, h2, h4 {
-    @apply font-serif text-blue-regular
+    @apply font-serif text-general-blue
   }
   h1 {
     @apply text-4xl
@@ -37,10 +37,10 @@
     @apply text-3xl
   }
   svg {
-    @apply inline-block w-7 h-7 scale-75 stroke-blue-regular stroke-2 fill-none
+    @apply inline-block w-7 h-7 scale-75 stroke-general-blue stroke-2 fill-none
   }
   svg.social-icon {
-    @apply inline-block scale-150 stroke-blue-regular stroke-2 fill-none
+    @apply inline-block scale-150 stroke-general-blue stroke-2 fill-none
   }
   div#layout {
     @apply container mx-auto max-w-2xl px-4 py-4 flex flex-col h-screen

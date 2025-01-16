@@ -2,17 +2,6 @@
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
-    // colors: {
-    // 	'background': '#f9f9f9',
-    //   'blue': {
-    //     regular: "#24294F",
-    //     lighter: "#284B63",
-    //   },
-    //   'red': "#812B1E",
-    //   'pink': "#721C9",
-    //   'purple': "#4A3CBB",
-    //   'green': "#385C45",
-    // },
     fontFamily: {
       sans: [
         "Inter light",
@@ -37,14 +26,12 @@ export default {
     extend: {
       colors: {
         background: "#f9f9f9",
-        blue: {
-          regular: "#24294F",
-          lighter: "#284B63",
-        },
-        red: "#812B1E",
-        pink: "#721C9",
-        purple: "#4A3CBB",
-        green: "#385C45",
+        "general-blue": "#24294F",
+        "general-blue-light": "#284B63",
+        about: "#812B1E",
+        book: "#721C99",
+        music: "#4A3CBB",
+        blog: "#385C45",
       },
     },
   },
