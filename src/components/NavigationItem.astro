@@ -14,9 +14,7 @@ const { slug, title, link, icon } = Astro.props;
   }
   {
     link && (
-      <a class="" title={title} href={`${link}`}>
-        {icon && <Fragment set:html={navIcons[icon]} />}
-        {title}
+      <a class="" title={title} href={`${link}`}>{icon && <Fragment set:html={navIcons[icon]} />}{title}
       </a>
     )
   }
