@@ -1,12 +1,12 @@
 ---
 import navIcons from "../assets/icons/navIcons";
-const { slug, title, link, icon } = Astro.props;
+const { slug, title, link, icon, class: className } = Astro.props;
 ---
 
 <div class="navigation-link--container">
   {
     slug && (
-      <a class={`flex flex-row items-center text-${icon} font-serif visited:text-${icon}`} title={title} href={`/${slug}`}>
+      <a class={`flex flex-row items-center ${className} font-serif visited:text-${icon}`} title={title} href={`/${slug}`}>
         {icon && <Fragment set:html={navIcons[icon]} />}
         {title}
       </a>

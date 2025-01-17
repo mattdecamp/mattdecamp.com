@@ -4,7 +4,7 @@ export default {
   theme: {
     fontFamily: {
       sans: [
-        "Inter light",
+        "Inter",
         "-apple-system",
         "BlinkMacSystemFont",
         "segoe ui",
@@ -24,10 +24,10 @@ export default {
       ],
     },
     extend: {
-      colors: {
-        background: "#f9f9f9",
-        "general-blue": "#24294F",
-        "general-blue-light": "#284B63",
+      textColor: {
+        // background: "#f9f9f9",
+        generalBlue: "#24294F",
+        generalBlueLight: "#284B63",
         about: "#812B1E",
         book: "#721C99",
         music: "#4A3CBB",
