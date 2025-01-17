@@ -6,14 +6,14 @@ import NavigationItem from "./NavigationItem.astro";
 <nav id="navigation">
   <!-- <SocialIcons /> -->
   <div id="navigation-links--container" class="">
-    <ul id="navigation-links" class="flex flex-row flex-wrap">
-      <NavigationItem icon="home" slug="#" title="Home" />
-      <NavigationItem icon="about" slug="about" title="About" />
-      <NavigationItem icon="blog" slug="blog" title="Blog" />
-      <NavigationItem icon="book" slug="bookshelf" title="Bookshelf" />
-      <NavigationItem icon="music" link="https://decamp.bandcamp.com" title="Music"
+    <ul id="navigation-links" class="flex flex-row flex-wrap gap-1">
+      <NavigationItem icon="home" slug="#" title="Home" class="text-generalBlue" />
+      <NavigationItem icon="about" slug="about" title="About" class="text-about" />
+      <NavigationItem icon="blog" slug="blog" title="Blog" class="text-blog" />
+      <NavigationItem icon="book" slug="bookshelf" title="Bookshelf" class="text-book" />
+      <NavigationItem icon="music" link="https://decamp.bandcamp.com" title="Music" class="text-music"
       />
-      <NavigationItem icon="refs" slug="refs" title="Refs" />
+      <NavigationItem icon="refs" slug="refs" title="Refs" class="text-generalBlueLight" />
     </ul>
   </div>
 </nav>
