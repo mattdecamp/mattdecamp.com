@@ -3,9 +3,13 @@ import {Image} from "astro:assets";
 import avatar from "../assets/images/Matt-DeCamp-avatar-1.jpg";
 ---
 
-<Image
-  src={avatar}
-  alt="Matt DeCamp"
-  width="150"
-  height="200"
-/>
+
+<div id="avatar--container" class="col-start-5 col-end-7 row-start-1 row-end-4 row-span-3 justify-items-end">
+  <Image
+    src={avatar}
+    alt="Matt DeCamp"
+    width="200"
+    height="133"
+    class="w-full min-w-20 max-w-28 rounded-t-3xl drop-shadow-md"
+  />
+</div>
