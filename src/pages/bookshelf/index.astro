@@ -6,31 +6,39 @@ const allBooks = (await getCollection("books")).sort(
   (a, b) => b.data.dateRead.valueOf() - a.data.dateRead.valueOf()
 );
 
+const dateOptions: object = {
+	year: "numeric",
+	month: "numeric",
+	day: "numeric",
+};
+
 const pageTitle = "Bookshelf";
 ---
 
 <BookList pageTitle={pageTitle}>
-  <ul>
+  <ul class="flex flex-row flex-wrap gap-8">
     {
       allBooks.map((book) => (
-        <li>
+        
+        <li class="flex flex-col flex-wrap w-40">
           {/* <a href={`/bookshelf/${book.id}/`}>{book.data.bookImage}</a> */}
           <a href={book.data.bookBuyUrl}>
-            <img
+            <Image
               src={book.data.bookImage}
               alt={`Book cover for ${book.data.bookTitle}`}
               height="220"
               width="140"
               decoding="async"
               loading="lazy"
+              class="book--cover w-200 h-220 drop-shadow-md rounded-sm"
             />
           </a>
-          <h3>{book.data.bookTitle}</h3>
-          <p>{book.data.bookAuthor}</p>
-          <p>
+          <h4>{book.data.bookTitle}</h4>
+          <p class="text-sm">{book.data.bookAuthor}</p>
+          <p class="text-sm font-serif text-book">
             {book.data.status &&
               !book.data.didntFinish &&
-              `Finished: ${book.data.dateRead}`}
+              `Finished: ${new Date(book.data.dateRead).toLocaleDateString("en-US", dateOptions)}`}
             {book.data.didntFinish && `Didn't Finish 🙁`}
             {!book.data.status && `Currently Reading`}
           </p>
