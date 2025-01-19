@@ -24,7 +24,7 @@ export default {
       ],
     },
     extend: {
-      textColor: {
+      colors: {
         // background: "#f9f9f9",
         generalBlue: "#24294F",
         generalBlueLight: "#284B63",
