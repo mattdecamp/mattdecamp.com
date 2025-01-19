@@ -6,20 +6,32 @@ const posts = (await getCollection("blog"))
   .filter((post) => post.data.published)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const pageTitle = "Blog | Matt DeCamp's website";
+const dateOptions: object = {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+
+const pageTitle = "Blog";
 ---
 
 <GeneralLayout pageTitle={pageTitle}>
-  <ul>
+  <ul class="list-none">
     {
       posts.map(
         (post) =>
           post.data.published && (
             <li>
-              {/* <a class="text-purple" href={`/blog/${post.id}/`}> */}
-              <h2 class="text-xl">{post.data.title}</h2>
-              {/* </a> */}
-              <p>{post.data.pubDate}</p>
+              <a class="text-purple" href={`/blog/${post.id}/`}>
+              <h2 class="text-xl text-blog">{post.data.title}</h2>
+              </a>
+              <p class="mb-0 text-base italic">
+                {new Date(post.data.pubDate).toLocaleDateString(
+                  "en-US",
+                  dateOptions
+                )}
+              </p>
+                <p class="text-base">{post.data.description}</p>
             </li>
           )
       )

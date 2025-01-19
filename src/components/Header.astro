@@ -18,7 +18,7 @@ const { title, subTitle, homepage } = Astro.props;
           </div>
           <div id="nav-container--bottom" class="grid grid-cols-6 grid-rows-3 gap-3 items-center mb-4">
             <div id="nav-titles" class="col-start-1 col-end-5 row-start-1 row-end-4 flex flex-col gap-2">
-              <h1 id="site-title" class="font-serif">{title}</h1>
+              <h1 id="site-title" class="font-serif mb-1">{title}</h1>
               <h3 class="">{subTitle}</h3>
               <SocialIcons />
             </div>
@@ -26,9 +26,9 @@ const { title, subTitle, homepage } = Astro.props;
           </div>
         </nav>
       ) : (
-        <nav id="nav-container">
+        <nav id="nav-container" class="mb-3">
           <div id="nav-container--top" class="flex flex-row flex-wrap gap-2 justify-between items-center">
-            <h1 id="site-title" class="font-serif text-3xl">{title}</h1>
+            <div id="site-title" class="font-serif text-3xl">{title}</div>
           </div>
           <div id="nav-container--botom" class="mb-2">
             <Navigation />

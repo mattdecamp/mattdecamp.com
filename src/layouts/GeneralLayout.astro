@@ -9,7 +9,7 @@ const { pageTitle } = Astro.props;
 
 <!doctype html>
 <html lang="en">
- <DocumentHead />
+  <DocumentHead />
   <!-- <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -18,10 +18,12 @@ const { pageTitle } = Astro.props;
     <title>{pageTitle}</title>
   </head> -->
   <body>
-    <Announcement />
+    <Announcement
+      announcement="Pardon the mess. I'm redesigning my website out in the open! Have a look around while I update."
+    />
     <div id="layout">
       <Header title="Matt DeCamp" />
-      <main id="main-container">
+      <main id="main-container" class="mb-4">
         <h1>{pageTitle}</h1>
         <slot />
       </main>
