@@ -6,10 +6,12 @@ const posts = (await getCollection("blog"))
   .filter((post) => post.data.published)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
+
 const dateOptions: object = {
   year: "numeric",
   month: "long",
-  day: "numeric",
+  day: "numeric", 
+  timeZone: "UTC"
 };
 
 const pageTitle = "Blog";
@@ -23,7 +25,7 @@ const pageTitle = "Blog";
           post.data.published && (
             <li>
               <a class="text-purple" href={`/blog/${post.id}/`}>
-              <h2 class="text-xl text-blog">{post.data.title}</h2>
+                <h2 class="text-xl text-blog">{post.data.title}</h2>
               </a>
               <p class="mb-0 text-base italic">
                 {new Date(post.data.pubDate).toLocaleDateString(
@@ -31,7 +33,7 @@ const pageTitle = "Blog";
                   dateOptions
                 )}
               </p>
-                <p class="text-base">{post.data.description}</p>
+              <p class="text-base">{post.data.description}</p>
             </li>
           )
       )
