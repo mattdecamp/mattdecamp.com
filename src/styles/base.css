@@ -42,6 +42,9 @@
   p {
     @apply mb-3
   }
+  a {
+    @apply hover:underline
+  }
   ul {
     @apply list-disc list-inside
   }
