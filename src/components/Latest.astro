@@ -1,5 +1,49 @@
 ---
+import { getCollection } from "astro:content";
+import navIcons from "../assets/icons/navIcons";
+
+// get blog posts
+const posts = (await getCollection("blog"))
+  .filter((post) => post.data.published)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+// get books
+const allBooks = (await getCollection("books")).sort(
+  (a, b) => b.data.dateRead.valueOf() - a.data.dateRead.valueOf()
+);
+
+// latest five books
+const firstFiveBooks = allBooks.slice(0, 10);
+// add new date key to first five books
+const latestBooks = firstFiveBooks.map((b) => ({
+  ...b,
+  date: new Date(b.data.dateRead),
+}));
+
+
+// latest five posts
+const firstFivePosts = posts.slice(0, 10);
+// add new date key to first five posts
+const latestPosts = firstFivePosts.map((p) => ({
+  ...p,
+  date: new Date(p.data.pubDate),
+}));
+
+// combine books and posts
+const latest = [...latestBooks, ...latestPosts];
+// sort by date
+const latestSorted = latest.sort((a, b) => b.date - a.date);
 ---
+
 <h2>Latest</h2>
 
-<!-- pull in latest 5 from all feeds here -->
+<ul class="list-none font-semibold text-base">
+  {latestSorted.slice(0, 10).map((item) => (
+    <li class={item.collection === "books" ? "text-book" : "text-blog"}>
+        {item.collection === "books" ? <Fragment set:html={navIcons.book} /> : <Fragment set:html={navIcons.blog} />}
+      <a href={item.collection === "books" ? item.data.bookBuyUrl : `/blog/${item.id}/`}>
+        {item.collection === "books" ? `${item.data.dateRead.toLocaleDateString("en-US", {timeZone:"UTC"})}: Finished reading ${item.data.bookTitle} by ${item.data.bookAuthor}` : `${item.data.pubDate.toLocaleDateString("en-US", {timeZone:"UTC"})}: ${item.data.title}`}
+      </a>
+    </li>
+  ))}
+</ul>
