@@ -10,4 +10,5 @@ export default defineConfig({
       applyBaseStyles: false,
     }),
   ],
+  site: 'https://mattdecamp.com'
 });

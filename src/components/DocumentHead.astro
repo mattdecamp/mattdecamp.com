@@ -5,7 +5,7 @@ interface Props {
   permalink: string;
   canonicalUrl?: string;
 }
-// TODO canonical URLs to posts 
+// TODO canonical URLs to posts
 let { pageTitle, description, permalink, canonicalUrl } = Astro.props;
 ---
 
@@ -39,6 +39,12 @@ let { pageTitle, description, permalink, canonicalUrl } = Astro.props;
     canonicalUrl && (
       <>
         <link rel="canonical" href={canonicalUrl} />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="Your Site's Title"
+          href={new URL("rss.xml", Astro.site)}
+        />
         <meta property="og:type" content="article" />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={description} />
