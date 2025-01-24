@@ -25,7 +25,7 @@
     src: url(../assets/fonts/Inter_18pt-SemiBold.ttf) format("truetype");
   }
   body {
-    @apply font-sans text-generalBlue text-lg
+    @apply font-sans text-generalBlue text-lg leading-8
   }
   h1, h2, h4 {
     @apply font-serif text-generalBlue
@@ -58,10 +58,10 @@
     @apply inline-block scale-125 stroke-generalBlue stroke-2 fill-none
   }
   div#layout {
-    @apply container mx-auto max-w-xl px-4 py-4 flex flex-col h-screen
+    @apply container mx-auto max-w-xl flex flex-col min-h-screen
   }
   main#main-container {
-    @apply flex flex-col mb-auto
+    @apply flex-grow
   }
   .book--cover {
     @apply w-40 h-60

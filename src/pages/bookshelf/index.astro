@@ -7,20 +7,23 @@ const allBooks = (await getCollection("books")).sort(
 );
 
 const dateOptions: object = {
-	year: "numeric",
-	month: "numeric",
-	day: "numeric",
-  timeZone: "UTC"
+  year: "numeric",
+  month: "numeric",
+  day: "numeric",
+  timeZone: "UTC",
 };
 
 const pageTitle = "Bookshelf";
 ---
 
 <BookList pageTitle={pageTitle}>
+  <p>
+    Here's what I'm reading, recently read, and books I've picked up well into
+    the past. Click on any of title to learn more about it.
+  </p>
   <ul class="flex flex-row flex-wrap gap-x-8 gap-y-4">
     {
       allBooks.map((book) => (
-        
         <li class="flex flex-col flex-wrap w-40">
           <a href={book.data.bookBuyUrl}>
             <Image
@@ -33,9 +36,11 @@ const pageTitle = "Bookshelf";
               class="book--cover mb-1 w-200 h-220 drop-shadow-md rounded"
             />
           </a>
-          <h4>{book.data.bookTitle}</h4>
+          <a href={book.data.bookBuyUrl}>
+            <h4>{book.data.bookTitle}</h4>
+          </a>
           <p class="text-sm mb-1">{book.data.bookAuthor}</p>
-          <p class="text-sm mb-1 font-serif text-book">
+          <p class="text-sm mb-1 font-serif text-blog">
             {book.data.status &&
               !book.data.didntFinish &&
               `Finished: ${new Date(book.data.dateRead).toLocaleDateString("en-US", dateOptions)}`}
