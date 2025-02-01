@@ -1,9 +1,9 @@
 ---
 id: "122"
-status: false
+status: true
 audiobook: false
 didntFinish: false
-dateRead: 2025-01-21
+dateRead: 2025-01-27
 bookTitle: "A Man Named Doll"
 bookAuthor: "Jonathan Ames"
 bookAuthoLF: "Ames, Jonathan"
