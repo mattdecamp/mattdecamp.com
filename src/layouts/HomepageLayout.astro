@@ -4,8 +4,6 @@ import DocumentHead from "../components/DocumentHead.astro";
 import Announcement from "../components/Announcement.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import Avatar from "../components/Avatar.astro";
-import SocialIcons from "../components/SocialIcons.astro";
 import Latest from "../components/Latest.astro";
 ---
 
@@ -13,17 +11,14 @@ import Latest from "../components/Latest.astro";
 <html lang="en">
   <DocumentHead />
   <body>
-    <Announcement
-      announcement="Pardon the mess. I'm redesigning my website out in the open! Have a look around while I update."
-    />
-    <div id="layout" class="mx-auto">
+    <Announcement />
+      <div id="layout" class="mx-auto">
       <Header
         homepage="true"
         title="Matt DeCamp"
         subTitle="Frontend Web Developer & Artist Manager"
       />
       <main id="main-container">
-        <!-- <h1 class="text-3xl font-bold underline">Hello world!</h1> -->
         <slot />
         <Latest />
       </main>
