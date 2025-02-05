@@ -1,11 +1,11 @@
 ---
-import GeneralLayout from "../layouts/GeneralLayout.astro";
+import PageLayout from "../layouts/PageLayout.astro";
 import { Content } from "../content/about.md";
 const pageTitle = "About Me";
 ---
 
-<GeneralLayout pageTitle={pageTitle}>
+<PageLayout pageTitle={pageTitle}>
   <article class="prose prose-lg prose-generalBlue">
     <Content />
   </article>
-</GeneralLayout>
+</PageLayout>
