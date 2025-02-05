@@ -1,10 +1,10 @@
 ---
-import GeneralLayout from "../layouts/GeneralLayout.astro";
+import PageLayout from "../layouts/PageLayout.astro";
 
 const { bookTitle, dateRead, bookImage, bookAuthor, status, audiobook, didntFinish, bookYear } = Astro.props;
 const pageTitle = "Bookshelf";
 ---
 
-<GeneralLayout pageTitle={pageTitle}>
+<PageLayout pageTitle={pageTitle}>
   <slot />
-</GeneralLayout>
+</PageLayout>

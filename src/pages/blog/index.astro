@@ -1,5 +1,5 @@
 ---
-import GeneralLayout from "../../layouts/GeneralLayout.astro";
+import PageLayout from "../../layouts/PageLayout.astro";
 import { getCollection } from "astro:content";
 
 const posts = (await getCollection("blog"))
@@ -17,7 +17,7 @@ const dateOptions: object = {
 const pageTitle = "Blog";
 ---
 
-<GeneralLayout pageTitle={pageTitle}>
+<PageLayout pageTitle={pageTitle}>
   <ul class="list-none">
     {
       posts.map(
@@ -39,4 +39,4 @@ const pageTitle = "Blog";
       )
     }
   </ul>
-</GeneralLayout>
+</PageLayout>
