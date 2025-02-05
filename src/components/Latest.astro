@@ -52,8 +52,8 @@ const dateOptions: object = {
             <Fragment set:html={navIcons.book} />{" "}
             <a href={`${item.data.bookBuyUrl}`}>
             {item.data.status
-              ? `${new Date(item.data.dateRead).toLocaleDateString("en-US", dateOptions)}: Finished reading ${item.data.bookTitle}`
-              : `Currently Reading ${item.data.bookTitle}`}
+              ? `${new Date(item.data.dateRead).toLocaleDateString("en-US", dateOptions)}: Finished reading "${item.data.bookTitle}"`
+              : `Currently Reading "${item.data.bookTitle}"`}
             </a>
           </span>
         ) : (
