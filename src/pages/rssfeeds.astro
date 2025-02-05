@@ -1,0 +1,104 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import Parser from "rss-parser";
+import {decode} from "html-entities";
+const parser = new Parser();
+
+const tenDaysAgo = new Date();
+tenDaysAgo.setDate(tenDaysAgo.getDate() - 10);
+
+const feedSources = [
+  "http://interconnected.org/home/;atom",
+  "https://www.thisiscolossal.com/feed/",
+  "http://feeds.kottke.org/main",
+  "http://feeds.feedburner.com/TheKidShouldSeeThis",
+  "http://feeds.feedburner.com/mcsweeneys",
+  "http://robinrendle.com/feed.xml",
+  "https://melanie-richards.com/feed.xml",
+  "https://funwithforms.com/feed/feed.xml",
+  "http://www.zachleat.com/web/feed/",
+  "http://www.rachelandrew.co.uk/feed/",
+  "https://amyhupe.co.uk/atom.xml",
+  "https://moderncss.dev/feed/",
+  "https://meyerweb.com/eric/thoughts/rss2/full",
+  "https://developer.wordpress.org/news/feed/",
+  "https://sia.codes/feed/feed.xml",
+  "https://www.htmhell.dev/feed.xml",
+  "https://www.matuzo.at/feed.xml",
+  "https://piccalil.li/feed.xml",
+  "https://www.miriamsuzanne.com/feed.xml",
+  "https://laurakalbag.com/posts/index.xml",
+  "https://mxb.dev/feed.xml",
+  "https://benmyers.dev/feed.xml",
+  "https://thewhippet.org/archive/rss/",
+  "http://www.scottohara.me/feed.xml",
+  "http://feeds.feedburner.com/CssTricks",
+  "https://calendee.com/rss/",
+  "https://github.com/readme.rss",
+  "https://web.dev/feed.xml",
+  "https://css-irl.info/rss.xml",
+  "https://mattdecamp.com/feed.xml",
+  "https://rachsmith.com/rss/",
+  "https://ericwbailey.design/feed/feed.xml",
+  "https://frontstuff.io/feed.xml",
+  "https://helloyes.dev/feeds/blog/feed.xml",
+  "http://daverupert.com/atom.xml",
+  "https://www.w3.org/blog/CSS/feed/atom/",
+  "http://clearleft.com/thinks/rss.xml",
+  "http://www.zeldman.com/feed/zeldman.xml",
+  "https://ianfrostweather.com/feed/",
+  "http://www.newyorker.com/feed/cartoons/daily-cartoon",
+  "http://pbfcomics.com/feed/feed.xml",
+  "http://www.smbc-comics.com/rss.php",
+  "https://www.scientificamerican.com/platform/syndication/rss/",
+];
+
+interface FeedItem {
+  feed?: string;
+  title?: string;
+  link?: string;
+  date?: Date;
+}
+
+const feedItems: FeedItem[] = [];
+
+await Promise.allSettled(
+  feedSources.map(async (source) => {
+    try {
+      const feed = await parser.parseURL(source);
+      feed.items.forEach((item) => {
+        const date = item.pubDate ? new Date(item.pubDate) : undefined;
+        if (date && date < tenDaysAgo) return;
+        feedItems.push({
+          feed: feed.title,
+          title: item.title,
+          link: item.link,
+          date,
+        });
+      });
+    } catch (error) {
+      console.error(`Error parsing feed: ${source}`, error);
+    }
+  })
+);
+
+const sortedFeedItems = feedItems.sort(
+  (a, b) => (b.date ?? new Date()).getTime() - (a.date ?? new Date()).getTime()
+);
+---
+
+<PageLayout pageTitle="Matt's Feed Reader">
+  {
+    sortedFeedItems.map((item) => (
+      <ul class="list-none font-normal text-lg leading-8 border-b-2">
+        <li>
+          <a href={item.link}>
+            <h3>{decode(item.title,{level:'html5'})}</h3>
+          </a>
+          <p>{item.feed}</p>
+          <p class="">{item.date}</p>
+        </li>
+      </ul>
+    ))
+  }
+</PageLayout>
