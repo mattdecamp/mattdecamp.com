@@ -1,7 +1,7 @@
 ---
 // import "../styles/base.css";
 import type { CollectionEntry } from "astro:content";
-import GeneralLayout from "./GeneralLayout.astro";
+import Layout from "./Layout.astro";
 
 type Props = CollectionEntry<"blog">["data"];
 
@@ -15,17 +15,17 @@ const dateOptions: object = {
 const { title, description, author, pubDate, tags } = Astro.props;
 ---
 
-<GeneralLayout>
-  <article class="prose prose-base prose-generalBlue">
+<Layout>
+  <article class="prose prose-base">
     <div>
+      <h1 class="text-4xl mb-0">{title}</h1>
       <p class="my-0">{new Date(pubDate).toLocaleDateString("en-US", dateOptions)}</p>
-      <ul class="list-none flex flex-row flex-wrap gap-x-2 gap-y-2">
+      <ul class="list-none flex flex-row flex-wrap m-0 ps-0">
         {tags.map((tag) => (
-          <li>{tag}</li>
+          <a href={`/tags/${tag}`}><li class="first:ps-0 m-0">#{tag}</li></a>
         ))}
       </ul>
-      <h1 class="text-4xl">{title}</h1>
     </div>
     <slot />
   </article>
-</GeneralLayout>
+</Layout>
