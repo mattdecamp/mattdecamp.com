@@ -25,7 +25,7 @@
     src: url(../assets/fonts/Inter_18pt-SemiBold.ttf) format("truetype");
   }
   body {
-    @apply font-sans text-generalBlue text-lg leading-8
+    @apply font-sans text-generalBlue text-lg
   }
   h1, h2, h4 {
     @apply font-serif text-generalBlue
