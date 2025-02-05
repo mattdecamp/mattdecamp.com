@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/BlogLayout.astro
+layout: ../../layouts/BlogPostLayout.astro
 title: "Migrating a Booklist from CSV to an Astro Content Collection"
 slug: migrating-booklist-from-csv-to-markdown-in-astro
 pubDate: 2025-01-06

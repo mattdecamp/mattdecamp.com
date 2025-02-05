@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/BlogLayout.astro
+layout: ../../layouts/BlogPostLayout.astro
 title: 'Scroll Snap in a Snap'
 slug: scroll-snap-in-a-snap
 pubDate: 2022-04-05

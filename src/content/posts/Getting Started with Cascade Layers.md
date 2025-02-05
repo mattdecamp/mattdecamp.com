@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/BlogLayout.astro
+layout: ../../layouts/BlogPostLayout.astro
 title: 'Getting Started with Cascade Layers'
 slug: getting-started-with-cascade-layers
 pubDate: 2023-05-13

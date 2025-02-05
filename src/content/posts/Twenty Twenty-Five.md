@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/BlogLayout.astro
+layout: ../../layouts/BlogPostLayout.astro
 title: 'Twenty Twenty-Five'
 slug: twenty-twenty-five
 pubDate: 2025-01-20

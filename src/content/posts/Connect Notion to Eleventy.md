@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/BlogLayout.astro
+layout: ../../layouts/BlogPostLayout.astro
 title: "Connect Notion to Eleventy"
 slug: connect-notion-to-eleventy
 pubDate: 2022-05-01

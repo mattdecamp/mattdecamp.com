@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/BlogLayout.astro
+layout: ../../layouts/BlogPostLayout.astro
 title: 'Run Thru: December'
 slug: run-thru-december
 pubDate: 2024-01-02
