@@ -3,7 +3,7 @@ id: "120"
 status: true
 audiobook: false
 didntFinish: false
-dateRead: 2024-02-17
+dateRead: 2025-02-17
 bookTitle: "Karla’s Choice"
 bookAuthor: "Nick Harkaway"
 bookAuthoLF: "Harkaway, Nick"
