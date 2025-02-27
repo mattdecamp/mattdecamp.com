@@ -76,6 +76,7 @@ class="social-icon"
     </svg>`,
   rss: `<svg xmlns="http://www.w3.org/2000/svg" class="social-icon" class="rss-icon"><path d="M19 20.001C19 11.729 12.271 5 4 5v2c7.168 0 13 5.832 13 13.001h2z"></path><path d="M12 20.001h2C14 14.486 9.514 10 4 10v2c4.411 0 8 3.589 8 8.001z"></path><circle cx="6" cy="18" r="2"></circle> </svg>`,
   bluesky: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10Q2-2 2 6t5 8q-5 3-1 6t6-3q2 6 6 3t-1-6q5 0 5-8t-10 4"/></svg>`,
+  bandcamp: `<svg xmlns="http://www.w3.org/2000/svg" class="social-icon" viewBox="0 0 32 32"><path fill="currentColor" stroke="none" stroke-linecap="round" stroke-width="1" d="M16 3C8.832 3 3 8.832 3 16s5.832 13 13 13s13-5.832 13-13S23.168 3 16 3m0 2c6.065 0 11 4.935 11 11s-4.935 11-11 11S5 22.065 5 16S9.935 5 16 5m-2.617 7l-4 8h9.234l4-8zm1.234 2h4.766l-2 4h-4.766z"/></svg>`,
 };
 
 export default socialIcons;
