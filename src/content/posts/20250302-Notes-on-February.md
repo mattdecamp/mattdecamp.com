@@ -5,7 +5,7 @@ slug: notes-on-february-2025
 pubDate: 2025-03-02
 description: "What I was up to in February"
 author: "Matt DeCamp"
-published: false
+published: true
 tags: ["music", "bandcamp", "tailwind", "running", "spring", "tv", "90s music"]
 ---
 
