@@ -1,6 +1,6 @@
 ---
 id: "123"
-status: false
+status: true
 audiobook: false
 didntFinish: false
 dateRead: 2025-01-28
