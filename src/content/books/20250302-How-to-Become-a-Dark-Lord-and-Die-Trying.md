@@ -1,9 +1,9 @@
 ---
 id: "124"
-status: false
+status: true
 audiobook: false
 didntFinish: false
-dateRead: 2025-03-02
+dateRead: 2025-03-17
 bookTitle: "How to Become the Dark Lord and Die Trying"
 bookAuthor: "Django Wexler"
 bookAuthoLF: "Wexler, Django"
