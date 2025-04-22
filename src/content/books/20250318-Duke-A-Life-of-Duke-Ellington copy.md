@@ -1,9 +1,9 @@
 ---
 id: "125"
-status: false
+status: true
 audiobook: false
-didntFinish: false
-dateRead: 2025-03-18
+didntFinish: true
+dateRead: 2025-04-05
 bookTitle: "Duke: A Life of Duke Ellington"
 bookAuthor: "Terry Teachout"
 bookAuthoLF: "Teachout, Terry"
