@@ -43,7 +43,7 @@
     @apply mb-3
   }
   a {
-    @apply hover:underline
+    @apply underline hover:underline-offset-4
   }
   ul {
     @apply list-disc list-inside
@@ -58,10 +58,13 @@
     @apply inline-block scale-125 stroke-generalBlue stroke-2 fill-none
   }
   div#layout {
-    @apply container mx-auto max-w-xl flex flex-col min-h-screen
+    @apply container px-3 md:px-0 mx-auto max-w-xl flex flex-col min-h-screen
   }
   main#main-container {
     @apply flex-grow
+  }
+  .post-content {
+    @apply grid gap-4
   }
   .book--cover {
     @apply w-40 h-60

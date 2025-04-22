@@ -16,7 +16,7 @@ const { title, description, author, pubDate, tags } = Astro.props;
 ---
 
 <Layout>
-  <article class="prose prose-base">
+  <article class="">
     <div>
       <h1 class="text-4xl mb-0">{title}</h1>
       <p class="my-0">{new Date(pubDate).toLocaleDateString("en-US", dateOptions)}</p>
@@ -26,6 +26,8 @@ const { title, description, author, pubDate, tags } = Astro.props;
         ))}
       </ul>
     </div>
-    <slot />
+    <div class="post-content">
+      <slot />
+    </div>
   </article>
 </Layout>
