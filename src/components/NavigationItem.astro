@@ -1,5 +1,5 @@
 ---
-import navIcons from "../assets/icons/navIcons";
+// import navIcons from "../assets/icons/navIcons";
 const { slug, title, link, icon, class: className } = Astro.props;
 ---
 
@@ -7,7 +7,7 @@ const { slug, title, link, icon, class: className } = Astro.props;
   {
     slug && (
       <a class={`flex flex-row items-center ${className} font-serif visited:text-${icon}`} title={title} href={`/${slug}`}>
-        {icon && <Fragment set:html={navIcons[icon]} />}
+        {/* {icon && <Fragment set:html={navIcons[icon]} />} */}
         {title}
       </a>
     )

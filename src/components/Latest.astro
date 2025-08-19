@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import navIcons from "../assets/icons/navIcons";
+// import navIcons from "../assets/icons/navIcons";
 
 // get blog posts
 const posts = (await getCollection("blog"))
@@ -41,7 +41,7 @@ const dateOptions: object = {
 };
 ---
 
-<h2 class="mb-2">Latest</h2>
+<h2 class="mb-2">Lately</h2>
 
 <ul class="list-none font-normal text-lg leading-8">
   {
@@ -49,7 +49,7 @@ const dateOptions: object = {
       <li>
         {item.collection === "books" ? (
           <span class="text-book">
-            <Fragment set:html={navIcons.book} />{" "}
+            {/* <Fragment set:html={navIcons.book} />{" "} */}
             <a href={`${item.data.bookBuyUrl}`}>
             {item.data.status
               ? `${new Date(item.data.dateRead).toLocaleDateString("en-US", dateOptions)}: Finished reading "${item.data.bookTitle}"`
@@ -58,7 +58,7 @@ const dateOptions: object = {
           </span>
         ) : (
           <span class="text-blog">
-            <Fragment set:html={navIcons.blog} />{" "}
+            {/* <Fragment set:html={navIcons.blog} />{" "} */}
             <a href={`/blog/${item.id}/`}>
             {new Date(item.data.pubDate).toLocaleDateString(
               "en-US",
