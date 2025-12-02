@@ -3,7 +3,7 @@ id: "135"
 status: false
 audiobook: true
 didntFinish: false
-dateRead: 2025-11-20
+dateRead: 2025-11-25
 bookTitle: "Eye of the World"
 bookAuthor: "Robert Jordan"
 bookAuthoLF: "Jordan, Robert"

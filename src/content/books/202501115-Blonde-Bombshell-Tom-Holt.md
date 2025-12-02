@@ -1,17 +1,17 @@
 ---
-id: "134"
-status: false
+id: "133"
+status: true
 audiobook: false
 didntFinish: false
 dateRead: 2025-11-20
-bookTitle: "Doughnut"
+bookTitle: "Blonde Bombshell"
 bookAuthor: "Tom Holt"
 bookAuthoLF: "Holt, Tom"
-bookImage: "https://images-us.bookshop.org/ingram/9780316226103.jpg"
-isbn13: 9780316226103
+bookImage: "https://upload.wikimedia.org/wikipedia/en/1/12/BlondeBombshellNovel.jpg"
+isbn13: 9781841497778
 bookPublisher: "Orbit"
 bookPages: 409
-bookYear: 2013
+bookYear: 2011
 bookYearOriginal: "2013"
-bookBuyUrl: "https://bookshop.org/a/93821/9780316226103"
+bookBuyUrl: "9781841497778"
 ---

@@ -8,10 +8,10 @@ bookTitle: "Doughnut"
 bookAuthor: "Tom Holt"
 bookAuthoLF: "Holt, Tom"
 bookImage: "https://images-us.bookshop.org/ingram/9780316226103.jpg"
-isbn13: 9780316226103
+isbn13: 9781841497778
 bookPublisher: "Orbit"
 bookPages: 400
-bookYear: 2013
+bookYear: 2011
 bookYearOriginal: "2013"
-bookBuyUrl: "https://bookshop.org/a/93821/9780316226103"
+bookBuyUrl: "https://bookshop.org/a/93821/9781841497778"
 ---
