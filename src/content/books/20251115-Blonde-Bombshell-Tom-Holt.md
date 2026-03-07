@@ -13,5 +13,5 @@ bookPublisher: "Orbit"
 bookPages: 409
 bookYear: 2011
 bookYearOriginal: "2013"
-bookBuyUrl: "9781841497778"
+bookBuyUrl: "https://bookshop.org/a/93821/9781841497778"
 ---
