@@ -20,10 +20,10 @@ const pageTitle = "Bookshelf";
   <p>
     On this page you can see what I've been reading lately. Click on any title to learn more about it.
   </p>
-  <ul class="flex flex-row flex-wrap gap-x-8 gap-y-4">
+  <ul class="">
     {
       allBooks.map((book) => (
-        <li class="flex flex-col flex-wrap w-40">
+        <li class="">
           <a href={book.data.bookBuyUrl}>
             <Image
               src={book.data.bookImage}
@@ -32,14 +32,14 @@ const pageTitle = "Bookshelf";
               width="140"
               decoding="async"
               loading="lazy"
-              class="book--cover mb-1 w-200 h-220 drop-shadow-md rounded"
+              class=""
             />
           </a>
           <a href={book.data.bookBuyUrl}>
             <h4>{book.data.bookTitle}</h4>
           </a>
-          <p class="text-sm mb-1">{book.data.bookAuthor}</p>
-          <p class="text-sm mb-1 font-serif text-blog">
+          <p class="">{book.data.bookAuthor}</p>
+          <p class="">
             {book.data.status &&
               !book.data.didntFinish &&
               `Finished: ${new Date(book.data.dateRead).toLocaleDateString("en-US", dateOptions)}`}

@@ -90,7 +90,7 @@ const sortedFeedItems = feedItems.sort(
 <PageLayout pageTitle="Matt's Feed Reader">
   {
     sortedFeedItems.map((item) => (
-      <ul class="list-none font-normal text-lg leading-8 border-b-2">
+      <ul class="">
         <li>
           <a href={item.link}>
             <h3>{decode(item.title,{level:'html5'})}</h3>

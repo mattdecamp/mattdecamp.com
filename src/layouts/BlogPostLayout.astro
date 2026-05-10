@@ -18,11 +18,11 @@ const { title, description, author, pubDate, tags } = Astro.props;
 <Layout>
   <article class="">
     <div>
-      <h1 class="text-4xl mb-0">{title}</h1>
-      <p class="my-0">{new Date(pubDate).toLocaleDateString("en-US", dateOptions)}</p>
-      <ul class="list-none flex flex-row flex-wrap m-0 ps-0">
+      <h1 class="">{title}</h1>
+      <p class="">{new Date(pubDate).toLocaleDateString("en-US", dateOptions)}</p>
+      <ul class="">
         {tags.map((tag) => (
-          <a href={`/tags/${tag}`}><li class="first:ps-0 m-0">#{tag}</li></a>
+          <a href={`/tags/${tag}`}><li class="">#{tag}</li></a>
         ))}
       </ul>
     </div>

@@ -48,7 +48,7 @@ const dateOptions: object = {
     latestSorted.slice(0, 6).map((item) => (
       <li>
         {item.collection === "books" ? (
-          <span class="text-book">
+          <span class="">
             {/* <Fragment set:html={navIcons.book} />{" "} */}
             <a href={`${item.data.bookBuyUrl}`}>
             {item.data.status
@@ -57,7 +57,7 @@ const dateOptions: object = {
             </a>
           </span>
         ) : (
-          <span class="text-blog">
+          <span class="">
             {/* <Fragment set:html={navIcons.blog} />{" "} */}
             <a href={`/blog/${item.id}/`}>
             {new Date(item.data.pubDate).toLocaleDateString(
@@ -68,10 +68,10 @@ const dateOptions: object = {
           </span>
         )}
         {/* {item.collection === "books" ? (
-        <span class="text-book">
+        <span class="">
           <Fragment set:html={navIcons.book} /></span>
         ) : (
-          <span class="text-blog"
+          <span class=""
           <Fragment set:html={navIcons.blog} />
         )}
         </span>

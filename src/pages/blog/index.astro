@@ -23,17 +23,17 @@ const pageTitle = "Blog";
       posts.map(
         (post) =>
           post.data.published && (
-            <li class="mb-4">
-              <a class="text-purple" href={`/blog/${post.id}/`}>
-                <h2 class="text3xl text-blog">{post.data.title}</h2>
+            <li class="">
+              <a class="" href={`/blog/${post.id}/`}>
+                <h2 class="">{post.data.title}</h2>
               </a>
-              <p class="mb-0 text-base italic">
+              <p class="">
                 {new Date(post.data.pubDate).toLocaleDateString(
                   "en-US",
                   dateOptions
                 )}
               </p>
-              <p class="text-base">{post.data.description}</p>
+              <p class="">{post.data.description}</p>
             </li>
           )
       )
