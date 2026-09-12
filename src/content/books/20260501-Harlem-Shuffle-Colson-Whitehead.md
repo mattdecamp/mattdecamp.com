@@ -1,7 +1,7 @@
 ---
 id: "141"
 status: true
-audiobook: true
+audiobook: false
 didntFinish: false
 dateRead: 2026-05-01
 bookTitle: "Harlem Shuffle"
