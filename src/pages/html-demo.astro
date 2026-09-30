@@ -1,0 +1,44 @@
+---
+const sample = "Sample text";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>HTML Elements Demo</title>
+	</head>
+	<body>
+		<header><h1>HTML Elements Demo</h1><p>{sample} in a header.</p></header>
+		<nav><a href="#content">Navigation link</a></nav>
+		<main id="content">
+			<section>
+        <h1>Heading 1</h1>
+				<h2>Heading 2</h2>
+				<h3>Heading 3</h3><h4>Heading 4</h4><h5>Heading 5</h5><h6>Heading 6</h6>
+				<p>A paragraph with <strong>strong</strong>, <b>bold</b>, <em>emphasis</em>, <i>italic</i>, <u>underlined</u>, <mark>marked</mark>, <small>small</small>, <del>deleted</del>, <ins>inserted</ins>, <s>struck</s>, <sub>subscript</sub>, <sup>superscript</sup>, <abbr title="HyperText Markup Language">HTML</abbr>, <cite>citation</cite>, <q>quote</q>, <code>code</code>, and <kbd>Ctrl</kbd> text.</p>
+				<blockquote>A block quotation with sample text.</blockquote>
+				<pre><code>const message = "Sample text";</code></pre>
+				<address>123 Sample Street, Web City</address><hr />
+				<bdi>Bidirectional text</bdi> <bdo dir="rtl">Reversed text</bdo> <ruby>漢 <rt>kan</rt></ruby> <time datetime="2025-01-01">January 1, 2025</time>
+			</section>
+			<section><h2>Lists</h2><ul><li>Unordered item</li><li>Another item</li></ul><ol><li>Ordered item</li><li>Another item</li></ol><dl><dt>Term</dt><dd>Definition text.</dd></dl></section>
+			<section>
+				<h2>Links and media</h2><a href="https://example.com">Example link</a>
+				<figure><img src="https://placehold.co/240x120" alt="Sample image" /><figcaption>Image caption</figcaption></figure>
+				<picture><source media="(min-width: 800px)" srcset="https://placehold.co/320x160" /><img src="https://placehold.co/240x120" alt="Responsive image" /></picture>
+				<audio controls><source src="sample.mp3" type="audio/mpeg" />Audio fallback text.</audio>
+				<video controls width="240"><source src="sample.mp4" type="video/mp4" />Video fallback text.</video>
+				<iframe title="Sample frame" srcdoc="<p>Iframe sample text.</p>"></iframe><embed src="sample.pdf" type="application/pdf" /><object data="sample.pdf" type="application/pdf">Object text.</object>
+			</section>
+			<section><h2>Table</h2><table><caption>Sample table</caption><colgroup><col /><col /></colgroup><thead><tr><th>Header</th><th>Value</th></tr></thead><tbody><tr><td>Cell</td><td>Sample text</td></tr></tbody><tfoot><tr><td colspan="2">Footer</td></tr></tfoot></table></section>
+			<section>
+				<h2>Form</h2>
+				<form><fieldset><legend>Sample form</legend><label for="name">Name</label><input id="name" type="text" value="Sample text" /><label for="choice">Choice</label><select id="choice"><optgroup label="Options"><option>Option one</option><option>Option two</option></optgroup></select><textarea>Sample text</textarea><input type="checkbox" checked /><input type="radio" name="radio" checked /><input type="range" /><input type="date" /><input type="color" /><input type="file" /><button type="button">Sample button</button><output>Sample output</output><progress value="60" max="100">60%</progress><meter value="0.7">70%</meter></fieldset></form>
+			</section>
+			<section><h2>Interactive and semantic</h2><details open><summary>Summary text</summary><p>Details sample text.</p></details><dialog open>Dialog sample text.</dialog><canvas width="200" height="50">Canvas fallback text.</canvas><data value="42">Data sample</data><div>Division text.</div><span>Span text.</span></section>
+		</main>
+		<aside><p>Aside sample text.</p></aside><footer><p>Footer sample text.</p></footer>
+	</body>
+</html>
