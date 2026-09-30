@@ -6,7 +6,12 @@ import Avatar from "./Avatar.astro";
 const { title, subTitle, homepage } = Astro.props;
 ---
 
-<header>   
+<header>
+  <nav>
+    <!-- <Hamburger /> -->
+
+    {
+      homepage ? (
         <nav id="nav-container" class="">
           <div id="nav-container--top" class="">
             <Navigation />
@@ -17,8 +22,19 @@ const { title, subTitle, homepage } = Astro.props;
               <h3 class="">{subTitle}</h3>
               <SocialIcons />
             </div>
+            {/* <Avatar /> */}
           </div>
         </nav>
-      
-
+      ) : (
+        <nav id="nav-container" class="">
+          <div id="nav-container--top" class="">
+            <div id="site-title" class="">{title}</div>
+          </div>
+          <div id="nav-container--botom" class="">
+            <Navigation />
+          </div>
+        </nav>
+      )
+    }
+  </nav>
 </header>

@@ -9,9 +9,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/rss": "^4.0.19",
+    "@astrojs/rss": "^4.0.14",
+    "@astrojs/tailwind": "^6.0.2",
     "@netlify/functions": "^3.0.0",
-    "astro": "^7.3.4",
+    "astro": "^5.16.9",
     "html-entities": "^2.5.2",
     "rss-parser": "^3.13.0"
   }
